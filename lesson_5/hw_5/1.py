@@ -44,8 +44,21 @@ def remove_player(players: list[dict], num: int) -> None:
             del players[index]
             log(message=f"Deleting {player_name}")
 
-    def update_player(num: int) -> None:
-        pass
+
+def update_player(players: list[dict], num: int, name: str, age: int) -> None:
+    if num in list_num:
+        for i, d in enumerate(
+            players
+        ):
+            if d["number"] == num:
+                players[i]["name"] = name
+                players[i]["age"] = age
+                log(message=f"Player №{num} has updated")
+
+            else:
+                pass
+    else:
+        log(message=f"Player with this number {num} doesn't exist")
 
 
 #                        TESTS
@@ -90,5 +103,23 @@ repr_players(team, True, "age")  # sort by age
 # 	12 Name: Cavin, Age: 17
 # 	6 Name: John, Age: 20
 # 	7 Name: Cris, Age: 31
+# 	3 Name: Mark, Age: 33
+# ______________________________________
+
+update_player(team, num=24, name="Frodo", age=51)
+# _______________________________________________________________
+# -> -> -> Player with this number 24 doesn't exist <- <- <- ***
+# _______________________________________________________________
+
+update_player(team, num=7, name="Frodo", age=51)
+# __________________________________________________________
+# -> -> -> Player №7 has updated <- <- <- ***
+# __________________________________________________________
+repr_players(team)  #after update
+# ______________________________________
+#  TEAM:
+# 	12 Name: Cavin, Age: 17
+# 	6 Name: John, Age: 20
+# 	7 Name: Frodo, Age: 51
 # 	3 Name: Mark, Age: 33
 # ______________________________________
