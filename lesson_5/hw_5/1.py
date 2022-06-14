@@ -12,8 +12,8 @@ list_num = [dct["number"] for dct in team]
 
 
 def repr_players(
-    players: list[dict], rotation: bool = False, key: str = "number"
-) -> None:  # instead of sorted I wrote rotation
+    players: list[dict], rotation: bool = False, key: str = "number"  # instead of sorted I wrote rotation
+) -> None:  
     if rotation is True:
         team.sort(key=operator.itemgetter(f"{key}"))
 
