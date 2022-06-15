@@ -19,7 +19,10 @@ def repr_players(
 
     print("TEAM:")
     for player in players:
-        print(f"\t{player['number']} " f"Name: {player['name']}, Age: {player['age']}")
+        print(
+            f"\t{player['number']} " f"Name:"
+            f" {player['name']}, Age: {player['age']}"
+        )
     print("\n")
 
 
@@ -47,9 +50,7 @@ def remove_player(players: list[dict], num: int) -> None:
 
 def update_player(players: list[dict], num: int, name: str, age: int) -> None:
     if num in list_num:
-        for i, d in enumerate(
-            players
-        ):
+        for i, d in enumerate(players):
             if d["number"] == num:
                 players[i]["name"] = name
                 players[i]["age"] = age
@@ -115,7 +116,7 @@ update_player(team, num=7, name="Frodo", age=51)
 # __________________________________________________________
 # -> -> -> Player №7 has updated <- <- <- ***
 # __________________________________________________________
-repr_players(team)  #after update
+repr_players(team)  # after update
 # ______________________________________
 #  TEAM:
 # 	12 Name: Cavin, Age: 17
