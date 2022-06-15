@@ -11,5 +11,4 @@ def read_lines_find_admin() -> list:
 
     print(results)
 
-
 read_lines_find_admin()
