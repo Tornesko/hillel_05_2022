@@ -19,10 +19,8 @@ def repr_players(
 
     print("TEAM:")
     for player in players:
-        print(
-            f"\t{player['number']} " f"Name:"
-            f" {player['name']}, Age: {player['age']}"
-        )
+        print(f"\t{player['number']} " f"Name:", end="")
+        print(f" {player['name']}, Age: {player['age']}")
     print("\n")
 
 
