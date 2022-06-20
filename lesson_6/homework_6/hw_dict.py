@@ -19,3 +19,8 @@ def get_user(name: str, age: int):
 
 
 print(get_user(name="Alice", age=30), get_user(name="Bob", age=25), sep="\n")
+
+# ---------------------------------
+# {'name': '*', 'age': 30}
+# {'name': '*', 'age': 25}
+# ---------------------------------
