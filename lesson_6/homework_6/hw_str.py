@@ -24,3 +24,8 @@ def get_university_founding_year() -> int:
 
 
 print(get_university_name(), get_university_founding_year(), sep="\n")
+
+# ---------------------------------
+# noitacudE rehgiH dna ygolonhceT fo etutitsnI nretseW
+# None
+# ---------------------------------
