@@ -17,7 +17,7 @@ class Price:
         loc_lst = []
         if self.currency != "USD":
             for dct in exchange_rates:
-                if dct.get("from") == self.currency:  # here we're buying dollar
+                if dct.get("from") == self.currency:
                     loc_lst.append(dct.get("value"))
 
             return self.amount * loc_lst[0]
