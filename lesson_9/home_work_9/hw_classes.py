@@ -34,7 +34,7 @@ class Price:
             loc_lst = []
             a = self.buy_usd() + other.ammount
             for dct in exchange_rates:
-                if dct.get("to") == self.currency:  # here we're selling dollar
+                if dct.get("to") == self.currency:
                     loc_lst.append(dct.get("value"))
             return a * loc_lst[0]
 
@@ -42,7 +42,7 @@ class Price:
             loc_lst = []
             a = self.buy_usd() + other.buy_usd()
             for dct in exchange_rates:
-                if dct.get("to") == self.currency:  # here we're selling dollar
+                if dct.get("to") == self.currency:
                     loc_lst.append(dct.get("value"))
             return a * loc_lst[0]
 
@@ -56,7 +56,7 @@ class Price:
             loc_lst = []
             a = self.buy_usd() - other.ammount
             for dct in exchange_rates:
-                if dct.get("to") == self.currency:  # here we're selling dollar
+                if dct.get("to") == self.currency:
                     loc_lst.append(dct.get("value"))
             return a * loc_lst[0]
 
@@ -64,7 +64,7 @@ class Price:
             loc_lst = []
             a = self.buy_usd() - other.buy_usd()
             for dct in exchange_rates:
-                if dct.get("to") == self.currency:  # here we're selling dollar
+                if dct.get("to") == self.currency:
                     loc_lst.append(dct.get("value"))
             return a * loc_lst[0]
 
