@@ -47,6 +47,3 @@ main_loop.close()
 # 6494
 # _________________________________
 # я не став чекати доки воно мільйон вирахує
-
-
-# TODO: Make this function asynchronous to compute less numbers faster
