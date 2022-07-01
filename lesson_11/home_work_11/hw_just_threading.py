@@ -16,7 +16,6 @@ def get_primes_amount(lst: list) -> int:
     res = 0
     for i in lst:
         res += i
-    print(res)
     return res
 
 
@@ -25,7 +24,6 @@ def get_average():
     for i in lst:
         sum += i
     res = sum / len(lst)
-    print(res)
     return res
 
 
@@ -33,7 +31,7 @@ t1 = Thread(target=fill_list)
 
 t1.start()
 t1.join()
-print(len(lst))
+print(lst)
 t2 = Thread(target=get_primes_amount, kwargs={"lst": lst})
 t3 = Thread(target=get_average)
 
