@@ -7,7 +7,7 @@
 #         -The resulting lists are displayed
 
 from random import randint
-from threading import Thread
+from threading import *
 
 lst = []
 
